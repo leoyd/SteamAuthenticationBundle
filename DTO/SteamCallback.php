@@ -66,4 +66,21 @@ class SteamCallback
 
         return $steamCallback;
     }
+
+    public function getVerificationArray(): array
+    {
+        $verificationArray = [];
+        $verificationArray['openid.ns'] = $this->openid_ns;
+        $verificationArray['openid.mode'] = $this->openid_mode;
+        $verificationArray['openid.op_endpoint'] =$this->openid_op_endpoint;
+        $verificationArray['openid.claimed_id'] =$this->openid_claimed_id;
+        $verificationArray['openid.identity'] =$this->openid_identity;
+        $verificationArray['openid.return_to'] =$this->openid_return_to;
+        $verificationArray['openid.response_nonce'] =$this->openid_response_nonce;
+        $verificationArray['openid.assoc_handle'] =$this->openid_assoc_handle;
+        $verificationArray['openid.signed'] =$this->openid_signed;
+        $verificationArray['openid.sig'] =$this->openid_sig;
+
+        return $verificationArray;
+    }
 }
